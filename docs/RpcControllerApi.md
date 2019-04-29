@@ -1,6 +1,6 @@
 # thingsboard_client.RpcControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

@@ -1,13 +1,13 @@
 # thingsboard_client.WidgetTypeControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_widget_type_using_delete**](WidgetTypeControllerApi.md#delete_widget_type_using_delete) | **DELETE** /api/widgetType/{widgetTypeId} | deleteWidgetType
-[**get_bundle_widget_types_using_get**](WidgetTypeControllerApi.md#get_bundle_widget_types_using_get) | **GET** /api/widgetTypes | getBundleWidgetTypes
+[**get_bundle_widget_types_using_get**](WidgetTypeControllerApi.md#get_bundle_widget_types_using_get) | **GET** /api/widgetTypes{?isSystem,bundleAlias} | getBundleWidgetTypes
 [**get_widget_type_by_id_using_get**](WidgetTypeControllerApi.md#get_widget_type_by_id_using_get) | **GET** /api/widgetType/{widgetTypeId} | getWidgetTypeById
-[**get_widget_type_using_get**](WidgetTypeControllerApi.md#get_widget_type_using_get) | **GET** /api/widgetType | getWidgetType
+[**get_widget_type_using_get**](WidgetTypeControllerApi.md#get_widget_type_using_get) | **GET** /api/widgetType{?isSystem,bundleAlias,alias} | getWidgetType
 [**save_widget_type_using_post**](WidgetTypeControllerApi.md#save_widget_type_using_post) | **POST** /api/widgetType | saveWidgetType
 
 # **delete_widget_type_using_delete**

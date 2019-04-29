@@ -207,7 +207,7 @@ class WidgetTypeControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/widgetTypes', 'GET',
+            '/api/widgetTypes{?isSystem,bundleAlias}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -409,7 +409,7 @@ class WidgetTypeControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/widgetType', 'GET',
+            '/api/widgetType{?isSystem,bundleAlias,alias}', 'GET',
             path_params,
             query_params,
             header_params,

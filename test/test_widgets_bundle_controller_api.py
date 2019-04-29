@@ -42,6 +42,13 @@ class TestWidgetsBundleControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_get_widgets_bundles_using_get(self):
+        """Test case for get_widgets_bundles_using_get
+
+        getWidgetsBundles  # noqa: E501
+        """
+        pass
+
     def test_get_widgets_bundles_using_get1(self):
         """Test case for get_widgets_bundles_using_get1
 

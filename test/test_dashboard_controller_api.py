@@ -77,6 +77,13 @@ class TestDashboardControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_get_max_datapoints_limit_using_get(self):
+        """Test case for get_max_datapoints_limit_using_get
+
+        getMaxDatapointsLimit  # noqa: E501
+        """
+        pass
+
     def test_get_server_time_using_get(self):
         """Test case for get_server_time_using_get
 

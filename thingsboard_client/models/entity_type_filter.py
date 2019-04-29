@@ -89,7 +89,7 @@ class EntityTypeFilter(object):
         """
         if entity_types is None:
             raise ValueError("Invalid value for `entity_types`, must not be `None`")  # noqa: E501
-        allowed_values = ["TENANT", "CUSTOMER", "USER", "DASHBOARD", "ASSET", "DEVICE", "ALARM", "RULE_CHAIN", "RULE_NODE"]  # noqa: E501
+        allowed_values = ["TENANT", "CUSTOMER", "USER", "DASHBOARD", "ASSET", "DEVICE", "ALARM", "RULE_CHAIN", "RULE_NODE", "ENTITY_VIEW", "WIDGETS_BUNDLE", "WIDGET_TYPE"]  # noqa: E501
         if not set(entity_types).issubset(set(allowed_values)):
             raise ValueError(
                 "Invalid values for `entity_types` [{0}], must be a subset of [{1}]"  # noqa: E501

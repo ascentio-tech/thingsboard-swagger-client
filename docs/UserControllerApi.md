@@ -1,18 +1,18 @@
 # thingsboard_client.UserControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_user_using_delete**](UserControllerApi.md#delete_user_using_delete) | **DELETE** /api/user/{userId} | deleteUser
 [**get_activation_link_using_get**](UserControllerApi.md#get_activation_link_using_get) | **GET** /api/user/{userId}/activationLink | getActivationLink
-[**get_customer_users_using_get**](UserControllerApi.md#get_customer_users_using_get) | **GET** /api/customer/{customerId}/users | getCustomerUsers
-[**get_tenant_admins_using_get**](UserControllerApi.md#get_tenant_admins_using_get) | **GET** /api/tenant/{tenantId}/users | getTenantAdmins
+[**get_customer_users_using_get**](UserControllerApi.md#get_customer_users_using_get) | **GET** /api/customer/{customerId}/users{?textSearch,idOffset,textOffset,limit} | getCustomerUsers
+[**get_tenant_admins_using_get**](UserControllerApi.md#get_tenant_admins_using_get) | **GET** /api/tenant/{tenantId}/users{?textSearch,idOffset,textOffset,limit} | getTenantAdmins
 [**get_user_by_id_using_get**](UserControllerApi.md#get_user_by_id_using_get) | **GET** /api/user/{userId} | getUserById
 [**get_user_token_using_get**](UserControllerApi.md#get_user_token_using_get) | **GET** /api/user/{userId}/token | getUserToken
 [**is_user_token_access_enabled_using_get**](UserControllerApi.md#is_user_token_access_enabled_using_get) | **GET** /api/user/tokenAccessEnabled | isUserTokenAccessEnabled
-[**save_user_using_post**](UserControllerApi.md#save_user_using_post) | **POST** /api/user | saveUser
-[**send_activation_email_using_post**](UserControllerApi.md#send_activation_email_using_post) | **POST** /api/user/sendActivationMail | sendActivationEmail
+[**save_user_using_post**](UserControllerApi.md#save_user_using_post) | **POST** /api/user{?sendActivationMail} | saveUser
+[**send_activation_email_using_post**](UserControllerApi.md#send_activation_email_using_post) | **POST** /api/user/sendActivationMail{?email} | sendActivationEmail
 
 # **delete_user_using_delete**
 > delete_user_using_delete(user_id)

@@ -312,7 +312,7 @@ class UserControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/customer/{customerId}/users', 'GET',
+            '/api/customer/{customerId}/users{?textSearch,idOffset,textOffset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -425,7 +425,7 @@ class UserControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenant/{tenantId}/users', 'GET',
+            '/api/tenant/{tenantId}/users{?textSearch,idOffset,textOffset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -797,7 +797,7 @@ class UserControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/user', 'POST',
+            '/api/user{?sendActivationMail}', 'POST',
             path_params,
             query_params,
             header_params,
@@ -886,7 +886,7 @@ class UserControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/user/sendActivationMail', 'POST',
+            '/api/user/sendActivationMail{?email}', 'POST',
             path_params,
             query_params,
             header_params,

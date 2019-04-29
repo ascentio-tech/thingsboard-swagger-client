@@ -42,6 +42,13 @@ class TestTelemetryControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_entity_timeseries_using_delete(self):
+        """Test case for delete_entity_timeseries_using_delete
+
+        deleteEntityTimeseries  # noqa: E501
+        """
+        pass
+
     def test_get_attribute_keys_by_scope_using_get(self):
         """Test case for get_attribute_keys_by_scope_using_get
 
@@ -81,6 +88,13 @@ class TestTelemetryControllerApi(unittest.TestCase):
         """Test case for get_timeseries_keys_using_get
 
         getTimeseriesKeys  # noqa: E501
+        """
+        pass
+
+    def test_get_timeseries_using_get(self):
+        """Test case for get_timeseries_using_get
+
+        getTimeseries  # noqa: E501
         """
         pass
 

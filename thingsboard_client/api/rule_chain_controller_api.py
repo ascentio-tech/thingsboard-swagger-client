@@ -490,7 +490,7 @@ class RuleChainControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/ruleChains', 'GET',
+            '/api/ruleChains{?textSearch,idOffset,textOffset,limit}', 'GET',
             path_params,
             query_params,
             header_params,

@@ -1,11 +1,11 @@
 # thingsboard_client.EventControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_events_using_get**](EventControllerApi.md#get_events_using_get) | **GET** /api/events/{entityType}/{entityId}/{eventType} | getEvents
-[**get_events_using_get1**](EventControllerApi.md#get_events_using_get1) | **GET** /api/events/{entityType}/{entityId} | getEvents
+[**get_events_using_get**](EventControllerApi.md#get_events_using_get) | **GET** /api/events/{entityType}/{entityId}/{eventType}{?tenantId,limit,startTime,endTime,ascOrder,offset} | getEvents
+[**get_events_using_get1**](EventControllerApi.md#get_events_using_get1) | **GET** /api/events/{entityType}/{entityId}{?tenantId,limit,startTime,endTime,ascOrder,offset} | getEvents
 
 # **get_events_using_get**
 > TimePageDataEvent get_events_using_get(entity_type, entity_id, event_type, tenant_id, limit, start_time=start_time, end_time=end_time, asc_order=asc_order, offset=offset)

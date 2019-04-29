@@ -126,7 +126,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{deviceId}/{scope}', 'DELETE',
+            '/api/plugins/telemetry/{deviceId}/{scope}{?keys}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -243,7 +243,132 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/{scope}', 'DELETE',
+            '/api/plugins/telemetry/{entityType}/{entityId}/{scope}{?keys}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DeferredResultResponseEntity',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_entity_timeseries_using_delete(self, entity_type, entity_id, keys, **kwargs):  # noqa: E501
+        """deleteEntityTimeseries  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_entity_timeseries_using_delete(entity_type, entity_id, keys, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str entity_type: entityType (required)
+        :param str entity_id: entityId (required)
+        :param str keys: keys (required)
+        :param bool delete_all_data_for_keys: deleteAllDataForKeys
+        :param int start_ts: startTs
+        :param int end_ts: endTs
+        :param bool rewrite_latest_if_deleted: rewriteLatestIfDeleted
+        :return: DeferredResultResponseEntity
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.delete_entity_timeseries_using_delete_with_http_info(entity_type, entity_id, keys, **kwargs)  # noqa: E501
+        else:
+            (data) = self.delete_entity_timeseries_using_delete_with_http_info(entity_type, entity_id, keys, **kwargs)  # noqa: E501
+            return data
+
+    def delete_entity_timeseries_using_delete_with_http_info(self, entity_type, entity_id, keys, **kwargs):  # noqa: E501
+        """deleteEntityTimeseries  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_entity_timeseries_using_delete_with_http_info(entity_type, entity_id, keys, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str entity_type: entityType (required)
+        :param str entity_id: entityId (required)
+        :param str keys: keys (required)
+        :param bool delete_all_data_for_keys: deleteAllDataForKeys
+        :param int start_ts: startTs
+        :param int end_ts: endTs
+        :param bool rewrite_latest_if_deleted: rewriteLatestIfDeleted
+        :return: DeferredResultResponseEntity
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['entity_type', 'entity_id', 'keys', 'delete_all_data_for_keys', 'start_ts', 'end_ts', 'rewrite_latest_if_deleted']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_entity_timeseries_using_delete" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'entity_type' is set
+        if ('entity_type' not in params or
+                params['entity_type'] is None):
+            raise ValueError("Missing the required parameter `entity_type` when calling `delete_entity_timeseries_using_delete`")  # noqa: E501
+        # verify the required parameter 'entity_id' is set
+        if ('entity_id' not in params or
+                params['entity_id'] is None):
+            raise ValueError("Missing the required parameter `entity_id` when calling `delete_entity_timeseries_using_delete`")  # noqa: E501
+        # verify the required parameter 'keys' is set
+        if ('keys' not in params or
+                params['keys'] is None):
+            raise ValueError("Missing the required parameter `keys` when calling `delete_entity_timeseries_using_delete`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'entity_type' in params:
+            path_params['entityType'] = params['entity_type']  # noqa: E501
+        if 'entity_id' in params:
+            path_params['entityId'] = params['entity_id']  # noqa: E501
+
+        query_params = []
+        if 'keys' in params:
+            query_params.append(('keys', params['keys']))  # noqa: E501
+        if 'delete_all_data_for_keys' in params:
+            query_params.append(('deleteAllDataForKeys', params['delete_all_data_for_keys']))  # noqa: E501
+        if 'start_ts' in params:
+            query_params.append(('startTs', params['start_ts']))  # noqa: E501
+        if 'end_ts' in params:
+            query_params.append(('endTs', params['end_ts']))  # noqa: E501
+        if 'rewrite_latest_if_deleted' in params:
+            query_params.append(('rewriteLatestIfDeleted', params['rewrite_latest_if_deleted']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['*/*'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['X-Authorization']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/plugins/telemetry/{entityType}/{entityId}/timeseries/delete{?keys,deleteAllDataForKeys,startTs,endTs,rewriteLatestIfDeleted}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -566,7 +691,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes/{scope}', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes/{scope}{?keys}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -671,7 +796,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes{?keys}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -776,7 +901,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries{?keys}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -878,6 +1003,143 @@ class TelemetryControllerApi(object):
 
         return self.api_client.call_api(
             '/api/plugins/telemetry/{entityType}/{entityId}/keys/timeseries', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DeferredResultResponseEntity',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_timeseries_using_get(self, entity_type, entity_id, keys, start_ts, end_ts, **kwargs):  # noqa: E501
+        """getTimeseries  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_timeseries_using_get(entity_type, entity_id, keys, start_ts, end_ts, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str entity_type: entityType (required)
+        :param str entity_id: entityId (required)
+        :param str keys: keys (required)
+        :param str start_ts: startTs (required)
+        :param str end_ts: endTs (required)
+        :param int interval: interval
+        :param int limit: limit
+        :param str agg: agg
+        :return: DeferredResultResponseEntity
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, **kwargs)  # noqa: E501
+            return data
+
+    def get_timeseries_using_get_with_http_info(self, entity_type, entity_id, keys, start_ts, end_ts, **kwargs):  # noqa: E501
+        """getTimeseries  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str entity_type: entityType (required)
+        :param str entity_id: entityId (required)
+        :param str keys: keys (required)
+        :param str start_ts: startTs (required)
+        :param str end_ts: endTs (required)
+        :param int interval: interval
+        :param int limit: limit
+        :param str agg: agg
+        :return: DeferredResultResponseEntity
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['entity_type', 'entity_id', 'keys', 'start_ts', 'end_ts', 'interval', 'limit', 'agg']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_timeseries_using_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'entity_type' is set
+        if ('entity_type' not in params or
+                params['entity_type'] is None):
+            raise ValueError("Missing the required parameter `entity_type` when calling `get_timeseries_using_get`")  # noqa: E501
+        # verify the required parameter 'entity_id' is set
+        if ('entity_id' not in params or
+                params['entity_id'] is None):
+            raise ValueError("Missing the required parameter `entity_id` when calling `get_timeseries_using_get`")  # noqa: E501
+        # verify the required parameter 'keys' is set
+        if ('keys' not in params or
+                params['keys'] is None):
+            raise ValueError("Missing the required parameter `keys` when calling `get_timeseries_using_get`")  # noqa: E501
+        # verify the required parameter 'start_ts' is set
+        if ('start_ts' not in params or
+                params['start_ts'] is None):
+            raise ValueError("Missing the required parameter `start_ts` when calling `get_timeseries_using_get`")  # noqa: E501
+        # verify the required parameter 'end_ts' is set
+        if ('end_ts' not in params or
+                params['end_ts'] is None):
+            raise ValueError("Missing the required parameter `end_ts` when calling `get_timeseries_using_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'entity_type' in params:
+            path_params['entityType'] = params['entity_type']  # noqa: E501
+        if 'entity_id' in params:
+            path_params['entityId'] = params['entity_id']  # noqa: E501
+
+        query_params = []
+        if 'interval' in params:
+            query_params.append(('interval', params['interval']))  # noqa: E501
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))  # noqa: E501
+        if 'agg' in params:
+            query_params.append(('agg', params['agg']))  # noqa: E501
+        if 'keys' in params:
+            query_params.append(('keys', params['keys']))  # noqa: E501
+        if 'start_ts' in params:
+            query_params.append(('startTs', params['start_ts']))  # noqa: E501
+        if 'end_ts' in params:
+            query_params.append(('endTs', params['end_ts']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['*/*'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['X-Authorization']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries{?interval,limit,agg,keys,startTs,endTs}', 'GET',
             path_params,
             query_params,
             header_params,

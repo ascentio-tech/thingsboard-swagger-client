@@ -91,6 +91,13 @@ class TestAssetControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_get_tenant_assets_using_get(self):
+        """Test case for get_tenant_assets_using_get
+
+        getTenantAssets  # noqa: E501
+        """
+        pass
+
     def test_save_asset_using_post(self):
         """Test case for save_asset_using_post
 

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.billing_info_response import BillingInfoResponse  # noqa: E501
+from models.entity_view_search_query import EntityViewSearchQuery  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
-class TestBillingInfoResponse(unittest.TestCase):
-    """BillingInfoResponse unit test stubs"""
+class TestEntityViewSearchQuery(unittest.TestCase):
+    """EntityViewSearchQuery unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestBillingInfoResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testBillingInfoResponse(self):
-        """Test BillingInfoResponse"""
+    def testEntityViewSearchQuery(self):
+        """Test EntityViewSearchQuery"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = thingsboard_client.models.billing_info_response.BillingInfoResponse()  # noqa: E501
+        # model = thingsboard_client.models.entity_view_search_query.EntityViewSearchQuery()  # noqa: E501
         pass
 
 

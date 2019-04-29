@@ -1,12 +1,13 @@
 # thingsboard_client.WidgetsBundleControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_widgets_bundle_using_delete**](WidgetsBundleControllerApi.md#delete_widgets_bundle_using_delete) | **DELETE** /api/widgetsBundle/{widgetsBundleId} | deleteWidgetsBundle
 [**get_widgets_bundle_by_id_using_get**](WidgetsBundleControllerApi.md#get_widgets_bundle_by_id_using_get) | **GET** /api/widgetsBundle/{widgetsBundleId} | getWidgetsBundleById
-[**get_widgets_bundles_using_get1**](WidgetsBundleControllerApi.md#get_widgets_bundles_using_get1) | **GET** /api/widgetsBundles | getWidgetsBundles
+[**get_widgets_bundles_using_get**](WidgetsBundleControllerApi.md#get_widgets_bundles_using_get) | **GET** /api/widgetsBundles | getWidgetsBundles
+[**get_widgets_bundles_using_get1**](WidgetsBundleControllerApi.md#get_widgets_bundles_using_get1) | **GET** /api/widgetsBundles{?textSearch,idOffset,textOffset,limit} | getWidgetsBundles
 [**save_widgets_bundle_using_post**](WidgetsBundleControllerApi.md#save_widgets_bundle_using_post) | **POST** /api/widgetsBundle | saveWidgetsBundle
 
 # **delete_widgets_bundle_using_delete**
@@ -100,6 +101,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WidgetsBundle**](WidgetsBundle.md)
+
+### Authorization
+
+[X-Authorization](../README.md#X-Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_widgets_bundles_using_get**
+> list[WidgetsBundle] get_widgets_bundles_using_get()
+
+getWidgetsBundles
+
+### Example
+```python
+from __future__ import print_function
+import time
+import thingsboard_client
+from thingsboard_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: X-Authorization
+configuration = thingsboard_client.Configuration()
+configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = thingsboard_client.WidgetsBundleControllerApi(thingsboard_client.ApiClient(configuration))
+
+try:
+    # getWidgetsBundles
+    api_response = api_instance.get_widgets_bundles_using_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WidgetsBundleControllerApi->get_widgets_bundles_using_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[WidgetsBundle]**](WidgetsBundle.md)
 
 ### Authorization
 

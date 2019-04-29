@@ -1,15 +1,16 @@
 # thingsboard_client.AlarmControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ack_alarm_using_post**](AlarmControllerApi.md#ack_alarm_using_post) | **POST** /api/alarm/{alarmId}/ack | ackAlarm
 [**clear_alarm_using_post**](AlarmControllerApi.md#clear_alarm_using_post) | **POST** /api/alarm/{alarmId}/clear | clearAlarm
+[**delete_alarm_using_delete**](AlarmControllerApi.md#delete_alarm_using_delete) | **DELETE** /api/alarm/{alarmId} | deleteAlarm
 [**get_alarm_by_id_using_get**](AlarmControllerApi.md#get_alarm_by_id_using_get) | **GET** /api/alarm/{alarmId} | getAlarmById
 [**get_alarm_info_by_id_using_get**](AlarmControllerApi.md#get_alarm_info_by_id_using_get) | **GET** /api/alarm/info/{alarmId} | getAlarmInfoById
-[**get_alarms_using_get**](AlarmControllerApi.md#get_alarms_using_get) | **GET** /api/alarm/{entityType}/{entityId} | getAlarms
-[**get_highest_alarm_severity_using_get**](AlarmControllerApi.md#get_highest_alarm_severity_using_get) | **GET** /api/alarm/highestSeverity/{entityType}/{entityId} | getHighestAlarmSeverity
+[**get_alarms_using_get**](AlarmControllerApi.md#get_alarms_using_get) | **GET** /api/alarm/{entityType}/{entityId}{?searchStatus,status,limit,startTime,endTime,ascOrder,offset,fetchOriginator} | getAlarms
+[**get_highest_alarm_severity_using_get**](AlarmControllerApi.md#get_highest_alarm_severity_using_get) | **GET** /api/alarm/highestSeverity/{entityType}/{entityId}{?searchStatus,status} | getHighestAlarmSeverity
 [**save_alarm_using_post**](AlarmControllerApi.md#save_alarm_using_post) | **POST** /api/alarm | saveAlarm
 
 # **ack_alarm_using_post**
@@ -111,6 +112,58 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_alarm_using_delete**
+> bool delete_alarm_using_delete(alarm_id)
+
+deleteAlarm
+
+### Example
+```python
+from __future__ import print_function
+import time
+import thingsboard_client
+from thingsboard_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: X-Authorization
+configuration = thingsboard_client.Configuration()
+configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = thingsboard_client.AlarmControllerApi(thingsboard_client.ApiClient(configuration))
+alarm_id = 'alarm_id_example' # str | alarmId
+
+try:
+    # deleteAlarm
+    api_response = api_instance.delete_alarm_using_delete(alarm_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AlarmControllerApi->delete_alarm_using_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **alarm_id** | **str**| alarmId | 
+
+### Return type
+
+**bool**
+
+### Authorization
+
+[X-Authorization](../README.md#X-Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

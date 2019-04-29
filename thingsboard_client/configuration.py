@@ -46,7 +46,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "//localhosT:8080/"
+        self.host = "//localhost/"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -240,5 +240,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 2.0\n"\
-               "SDK Package Version: 2.1.1".\
+               "SDK Package Version: 2.3.0".\
                format(env=sys.platform, pyversion=sys.version)

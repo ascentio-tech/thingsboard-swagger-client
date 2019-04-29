@@ -514,7 +514,7 @@ class DeviceControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/customer/{customerId}/devices', 'GET',
+            '/api/customer/{customerId}/devices{?type,textSearch,idOffset,textOffset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -878,7 +878,7 @@ class DeviceControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/devices', 'GET',
+            '/api/devices{?deviceIds}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -971,7 +971,7 @@ class DeviceControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenant/devices', 'GET',
+            '/api/tenant/devices{?deviceName}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -979,6 +979,115 @@ class DeviceControllerApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Device',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_tenant_devices_using_get(self, limit, **kwargs):  # noqa: E501
+        """getTenantDevices  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_tenant_devices_using_get(limit, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str limit: limit (required)
+        :param str type: type
+        :param str text_search: textSearch
+        :param str id_offset: idOffset
+        :param str text_offset: textOffset
+        :return: TextPageDataDevice
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_tenant_devices_using_get_with_http_info(limit, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_tenant_devices_using_get_with_http_info(limit, **kwargs)  # noqa: E501
+            return data
+
+    def get_tenant_devices_using_get_with_http_info(self, limit, **kwargs):  # noqa: E501
+        """getTenantDevices  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_tenant_devices_using_get_with_http_info(limit, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str limit: limit (required)
+        :param str type: type
+        :param str text_search: textSearch
+        :param str id_offset: idOffset
+        :param str text_offset: textOffset
+        :return: TextPageDataDevice
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['limit', 'type', 'text_search', 'id_offset', 'text_offset']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_tenant_devices_using_get" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'limit' is set
+        if ('limit' not in params or
+                params['limit'] is None):
+            raise ValueError("Missing the required parameter `limit` when calling `get_tenant_devices_using_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))  # noqa: E501
+        if 'text_search' in params:
+            query_params.append(('textSearch', params['text_search']))  # noqa: E501
+        if 'id_offset' in params:
+            query_params.append(('idOffset', params['id_offset']))  # noqa: E501
+        if 'text_offset' in params:
+            query_params.append(('textOffset', params['text_offset']))  # noqa: E501
+        if 'limit' in params:
+            query_params.append(('limit', params['limit']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['*/*'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['X-Authorization']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/api/tenant/devices{?type,textSearch,idOffset,textOffset,limit}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TextPageDataDevice',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

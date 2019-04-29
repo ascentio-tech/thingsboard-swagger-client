@@ -397,7 +397,7 @@ class CustomerControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/customers', 'GET',
+            '/api/customers{?textSearch,idOffset,textOffset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -583,7 +583,7 @@ class CustomerControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenant/customers', 'GET',
+            '/api/tenant/customers{?customerTitle}', 'GET',
             path_params,
             query_params,
             header_params,

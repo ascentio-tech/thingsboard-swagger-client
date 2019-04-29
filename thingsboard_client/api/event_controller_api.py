@@ -158,7 +158,7 @@ class EventControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/events/{entityType}/{entityId}/{eventType}', 'GET',
+            '/api/events/{entityType}/{entityId}/{eventType}{?tenantId,limit,startTime,endTime,ascOrder,offset}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -291,7 +291,7 @@ class EventControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/events/{entityType}/{entityId}', 'GET',
+            '/api/events/{entityType}/{entityId}{?tenantId,limit,startTime,endTime,ascOrder,offset}', 'GET',
             path_params,
             query_params,
             header_params,

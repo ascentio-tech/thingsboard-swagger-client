@@ -49,10 +49,38 @@ class TestEntityRelationControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_find_by_from_using_get1(self):
+        """Test case for find_by_from_using_get1
+
+        findByFrom  # noqa: E501
+        """
+        pass
+
     def test_find_by_query_using_post2(self):
         """Test case for find_by_query_using_post2
 
         findByQuery  # noqa: E501
+        """
+        pass
+
+    def test_find_by_to_using_get(self):
+        """Test case for find_by_to_using_get
+
+        findByTo  # noqa: E501
+        """
+        pass
+
+    def test_find_by_to_using_get1(self):
+        """Test case for find_by_to_using_get1
+
+        findByTo  # noqa: E501
+        """
+        pass
+
+    def test_find_info_by_from_using_get(self):
+        """Test case for find_info_by_from_using_get
+
+        findInfoByFrom  # noqa: E501
         """
         pass
 

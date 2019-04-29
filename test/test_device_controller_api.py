@@ -98,6 +98,13 @@ class TestDeviceControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_get_tenant_devices_using_get(self):
+        """Test case for get_tenant_devices_using_get
+
+        getTenantDevices  # noqa: E501
+        """
+        pass
+
     def test_save_device_credentials_using_post(self):
         """Test case for save_device_credentials_using_post
 

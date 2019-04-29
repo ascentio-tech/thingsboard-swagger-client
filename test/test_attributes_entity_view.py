@@ -15,24 +15,23 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.billing_controller_api import BillingControllerApi  # noqa: E501
+from models.attributes_entity_view import AttributesEntityView  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
-class TestBillingControllerApi(unittest.TestCase):
-    """BillingControllerApi unit test stubs"""
+class TestAttributesEntityView(unittest.TestCase):
+    """AttributesEntityView unit test stubs"""
 
     def setUp(self):
-        self.api = api.billing_controller_api.BillingControllerApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_create_billing_cycle_using_post(self):
-        """Test case for create_billing_cycle_using_post
-
-        createBillingCycle  # noqa: E501
-        """
+    def testAttributesEntityView(self):
+        """Test AttributesEntityView"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = thingsboard_client.models.attributes_entity_view.AttributesEntityView()  # noqa: E501
         pass
 
 

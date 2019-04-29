@@ -101,7 +101,7 @@ class RelationsSearchParameters(object):
         """
         if root_type is None:
             raise ValueError("Invalid value for `root_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["TENANT", "CUSTOMER", "USER", "DASHBOARD", "ASSET", "DEVICE", "ALARM", "RULE_CHAIN", "RULE_NODE"]  # noqa: E501
+        allowed_values = ["TENANT", "CUSTOMER", "USER", "DASHBOARD", "ASSET", "DEVICE", "ALARM", "RULE_CHAIN", "RULE_NODE", "ENTITY_VIEW", "WIDGETS_BUNDLE", "WIDGET_TYPE"]  # noqa: E501
         if root_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `root_type` ({0}), must be one of {1}"  # noqa: E501

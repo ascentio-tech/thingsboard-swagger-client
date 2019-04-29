@@ -1,6 +1,6 @@
 # thingsboard_client.DashboardControllerApi
 
-All URIs are relative to *//localhosT:8080/*
+All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,12 +8,13 @@ Method | HTTP request | Description
 [**assign_dashboard_to_customer_using_post**](DashboardControllerApi.md#assign_dashboard_to_customer_using_post) | **POST** /api/customer/{customerId}/dashboard/{dashboardId} | assignDashboardToCustomer
 [**assign_dashboard_to_public_customer_using_post**](DashboardControllerApi.md#assign_dashboard_to_public_customer_using_post) | **POST** /api/customer/public/dashboard/{dashboardId} | assignDashboardToPublicCustomer
 [**delete_dashboard_using_delete**](DashboardControllerApi.md#delete_dashboard_using_delete) | **DELETE** /api/dashboard/{dashboardId} | deleteDashboard
-[**get_customer_dashboards_using_get**](DashboardControllerApi.md#get_customer_dashboards_using_get) | **GET** /api/customer/{customerId}/dashboards | getCustomerDashboards
+[**get_customer_dashboards_using_get**](DashboardControllerApi.md#get_customer_dashboards_using_get) | **GET** /api/customer/{customerId}/dashboards{?startTime,endTime,ascOrder,offset,limit} | getCustomerDashboards
 [**get_dashboard_by_id_using_get**](DashboardControllerApi.md#get_dashboard_by_id_using_get) | **GET** /api/dashboard/{dashboardId} | getDashboardById
 [**get_dashboard_info_by_id_using_get**](DashboardControllerApi.md#get_dashboard_info_by_id_using_get) | **GET** /api/dashboard/info/{dashboardId} | getDashboardInfoById
+[**get_max_datapoints_limit_using_get**](DashboardControllerApi.md#get_max_datapoints_limit_using_get) | **GET** /api/dashboard/maxDatapointsLimit | getMaxDatapointsLimit
 [**get_server_time_using_get**](DashboardControllerApi.md#get_server_time_using_get) | **GET** /api/dashboard/serverTime | getServerTime
-[**get_tenant_dashboards_using_get**](DashboardControllerApi.md#get_tenant_dashboards_using_get) | **GET** /api/tenant/dashboards | getTenantDashboards
-[**get_tenant_dashboards_using_get1**](DashboardControllerApi.md#get_tenant_dashboards_using_get1) | **GET** /api/tenant/{tenantId}/dashboards | getTenantDashboards
+[**get_tenant_dashboards_using_get**](DashboardControllerApi.md#get_tenant_dashboards_using_get) | **GET** /api/tenant/dashboards{?textSearch,idOffset,textOffset,limit} | getTenantDashboards
+[**get_tenant_dashboards_using_get1**](DashboardControllerApi.md#get_tenant_dashboards_using_get1) | **GET** /api/tenant/{tenantId}/dashboards{?textSearch,idOffset,textOffset,limit} | getTenantDashboards
 [**remove_dashboard_customers_using_post**](DashboardControllerApi.md#remove_dashboard_customers_using_post) | **POST** /api/dashboard/{dashboardId}/customers/remove | removeDashboardCustomers
 [**save_dashboard_using_post**](DashboardControllerApi.md#save_dashboard_using_post) | **POST** /api/dashboard | saveDashboard
 [**unassign_dashboard_from_customer_using_delete**](DashboardControllerApi.md#unassign_dashboard_from_customer_using_delete) | **DELETE** /api/customer/{customerId}/dashboard/{dashboardId} | unassignDashboardFromCustomer
@@ -385,6 +386,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DashboardInfo**](DashboardInfo.md)
+
+### Authorization
+
+[X-Authorization](../README.md#X-Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_max_datapoints_limit_using_get**
+> int get_max_datapoints_limit_using_get()
+
+getMaxDatapointsLimit
+
+### Example
+```python
+from __future__ import print_function
+import time
+import thingsboard_client
+from thingsboard_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: X-Authorization
+configuration = thingsboard_client.Configuration()
+configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = thingsboard_client.DashboardControllerApi(thingsboard_client.ApiClient(configuration))
+
+try:
+    # getMaxDatapointsLimit
+    api_response = api_instance.get_max_datapoints_limit_using_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DashboardControllerApi->get_max_datapoints_limit_using_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**int**
 
 ### Authorization
 

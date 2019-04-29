@@ -134,7 +134,7 @@ class AuditLogControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/audit/logs/customer/{customerId}', 'GET',
+            '/api/audit/logs/customer/{customerId}{?startTime,endTime,ascOrder,offset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -259,7 +259,7 @@ class AuditLogControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/audit/logs/entity/{entityType}/{entityId}', 'GET',
+            '/api/audit/logs/entity/{entityType}/{entityId}{?startTime,endTime,ascOrder,offset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -376,7 +376,7 @@ class AuditLogControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/audit/logs/user/{userId}', 'GET',
+            '/api/audit/logs/user/{userId}{?startTime,endTime,ascOrder,offset,limit}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -485,7 +485,7 @@ class AuditLogControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/audit/logs', 'GET',
+            '/api/audit/logs{?startTime,endTime,ascOrder,offset,limit}', 'GET',
             path_params,
             query_params,
             header_params,

@@ -300,7 +300,7 @@ class AuthControllerApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/noauth/activate', 'GET',
+            '/api/noauth/activate{?activateToken}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -393,7 +393,7 @@ class AuthControllerApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/noauth/resetPassword', 'GET',
+            '/api/noauth/resetPassword{?resetToken}', 'GET',
             path_params,
             query_params,
             header_params,

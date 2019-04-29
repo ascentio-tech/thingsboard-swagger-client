@@ -42,6 +42,13 @@ class TestAlarmControllerApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_alarm_using_delete(self):
+        """Test case for delete_alarm_using_delete
+
+        deleteAlarm  # noqa: E501
+        """
+        pass
+
     def test_get_alarm_by_id_using_get(self):
         """Test case for get_alarm_by_id_using_get
 
