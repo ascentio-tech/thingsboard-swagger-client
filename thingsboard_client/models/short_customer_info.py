@@ -56,7 +56,8 @@ class ShortCustomerInfo(object):
             self.public = public
         if title is not None:
             self.title = title
-        self.is_public = is_public
+        if is_public is not None:
+            self.is_public = is_public
 
     @property
     def customer_id(self):
@@ -139,8 +140,6 @@ class ShortCustomerInfo(object):
         :param is_public: The is_public of this ShortCustomerInfo.  # noqa: E501
         :type: bool
         """
-        if is_public is None:
-            raise ValueError("Invalid value for `is_public`, must not be `None`")  # noqa: E501
 
         self._is_public = is_public
 
