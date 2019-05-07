@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**get_latest_rule_node_debug_input_using_get**](RuleChainControllerApi.md#get_latest_rule_node_debug_input_using_get) | **GET** /api/ruleNode/{ruleNodeId}/debugIn | getLatestRuleNodeDebugInput
 [**get_rule_chain_by_id_using_get**](RuleChainControllerApi.md#get_rule_chain_by_id_using_get) | **GET** /api/ruleChain/{ruleChainId} | getRuleChainById
 [**get_rule_chain_meta_data_using_get**](RuleChainControllerApi.md#get_rule_chain_meta_data_using_get) | **GET** /api/ruleChain/{ruleChainId}/metadata | getRuleChainMetaData
-[**get_rule_chains_using_get**](RuleChainControllerApi.md#get_rule_chains_using_get) | **GET** /api/ruleChains{?textSearch,idOffset,textOffset,limit} | getRuleChains
+[**get_rule_chains_using_get**](RuleChainControllerApi.md#get_rule_chains_using_get) | **GET** /api/ruleChains | getRuleChains
 [**save_rule_chain_meta_data_using_post**](RuleChainControllerApi.md#save_rule_chain_meta_data_using_post) | **POST** /api/ruleChain/metadata | saveRuleChainMetaData
 [**save_rule_chain_using_post**](RuleChainControllerApi.md#save_rule_chain_using_post) | **POST** /api/ruleChain | saveRuleChain
 [**set_root_rule_chain_using_post**](RuleChainControllerApi.md#set_root_rule_chain_using_post) | **POST** /api/ruleChain/{ruleChainId}/root | setRootRuleChain

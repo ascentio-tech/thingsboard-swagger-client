@@ -522,7 +522,7 @@ class DashboardControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/customer/{customerId}/dashboards{?startTime,endTime,ascOrder,offset,limit}', 'GET',
+            '/api/customer/{customerId}/dashboards', 'GET',
             path_params,
             query_params,
             header_params,
@@ -983,7 +983,7 @@ class DashboardControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenant/dashboards{?textSearch,idOffset,textOffset,limit}', 'GET',
+            '/api/tenant/dashboards', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1096,7 +1096,7 @@ class DashboardControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenant/{tenantId}/dashboards{?textSearch,idOffset,textOffset,limit}', 'GET',
+            '/api/tenant/{tenantId}/dashboards', 'GET',
             path_params,
             query_params,
             header_params,

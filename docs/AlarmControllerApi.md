@@ -9,8 +9,8 @@ Method | HTTP request | Description
 [**delete_alarm_using_delete**](AlarmControllerApi.md#delete_alarm_using_delete) | **DELETE** /api/alarm/{alarmId} | deleteAlarm
 [**get_alarm_by_id_using_get**](AlarmControllerApi.md#get_alarm_by_id_using_get) | **GET** /api/alarm/{alarmId} | getAlarmById
 [**get_alarm_info_by_id_using_get**](AlarmControllerApi.md#get_alarm_info_by_id_using_get) | **GET** /api/alarm/info/{alarmId} | getAlarmInfoById
-[**get_alarms_using_get**](AlarmControllerApi.md#get_alarms_using_get) | **GET** /api/alarm/{entityType}/{entityId}{?searchStatus,status,limit,startTime,endTime,ascOrder,offset,fetchOriginator} | getAlarms
-[**get_highest_alarm_severity_using_get**](AlarmControllerApi.md#get_highest_alarm_severity_using_get) | **GET** /api/alarm/highestSeverity/{entityType}/{entityId}{?searchStatus,status} | getHighestAlarmSeverity
+[**get_alarms_using_get**](AlarmControllerApi.md#get_alarms_using_get) | **GET** /api/alarm/{entityType}/{entityId} | getAlarms
+[**get_highest_alarm_severity_using_get**](AlarmControllerApi.md#get_highest_alarm_severity_using_get) | **GET** /api/alarm/highestSeverity/{entityType}/{entityId} | getHighestAlarmSeverity
 [**save_alarm_using_post**](AlarmControllerApi.md#save_alarm_using_post) | **POST** /api/alarm | saveAlarm
 
 # **ack_alarm_using_post**

@@ -7,9 +7,9 @@ Method | HTTP request | Description
 [**delete_customer_using_delete**](CustomerControllerApi.md#delete_customer_using_delete) | **DELETE** /api/customer/{customerId} | deleteCustomer
 [**get_customer_by_id_using_get**](CustomerControllerApi.md#get_customer_by_id_using_get) | **GET** /api/customer/{customerId} | getCustomerById
 [**get_customer_title_by_id_using_get**](CustomerControllerApi.md#get_customer_title_by_id_using_get) | **GET** /api/customer/{customerId}/title | getCustomerTitleById
-[**get_customers_using_get**](CustomerControllerApi.md#get_customers_using_get) | **GET** /api/customers{?textSearch,idOffset,textOffset,limit} | getCustomers
+[**get_customers_using_get**](CustomerControllerApi.md#get_customers_using_get) | **GET** /api/customers | getCustomers
 [**get_short_customer_info_by_id_using_get**](CustomerControllerApi.md#get_short_customer_info_by_id_using_get) | **GET** /api/customer/{customerId}/shortInfo | getShortCustomerInfoById
-[**get_tenant_customer_using_get**](CustomerControllerApi.md#get_tenant_customer_using_get) | **GET** /api/tenant/customers{?customerTitle} | getTenantCustomer
+[**get_tenant_customer_using_get**](CustomerControllerApi.md#get_tenant_customer_using_get) | **GET** /api/tenant/customers | getTenantCustomer
 [**save_customer_using_post**](CustomerControllerApi.md#save_customer_using_post) | **POST** /api/customer | saveCustomer
 
 # **delete_customer_using_delete**

@@ -4,10 +4,10 @@ All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_audit_logs_by_customer_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_customer_id_using_get) | **GET** /api/audit/logs/customer/{customerId}{?startTime,endTime,ascOrder,offset,limit} | getAuditLogsByCustomerId
-[**get_audit_logs_by_entity_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_entity_id_using_get) | **GET** /api/audit/logs/entity/{entityType}/{entityId}{?startTime,endTime,ascOrder,offset,limit} | getAuditLogsByEntityId
-[**get_audit_logs_by_user_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_user_id_using_get) | **GET** /api/audit/logs/user/{userId}{?startTime,endTime,ascOrder,offset,limit} | getAuditLogsByUserId
-[**get_audit_logs_using_get**](AuditLogControllerApi.md#get_audit_logs_using_get) | **GET** /api/audit/logs{?startTime,endTime,ascOrder,offset,limit} | getAuditLogs
+[**get_audit_logs_by_customer_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_customer_id_using_get) | **GET** /api/audit/logs/customer/{customerId} | getAuditLogsByCustomerId
+[**get_audit_logs_by_entity_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_entity_id_using_get) | **GET** /api/audit/logs/entity/{entityType}/{entityId} | getAuditLogsByEntityId
+[**get_audit_logs_by_user_id_using_get**](AuditLogControllerApi.md#get_audit_logs_by_user_id_using_get) | **GET** /api/audit/logs/user/{userId} | getAuditLogsByUserId
+[**get_audit_logs_using_get**](AuditLogControllerApi.md#get_audit_logs_using_get) | **GET** /api/audit/logs | getAuditLogs
 
 # **get_audit_logs_by_customer_id_using_get**
 > TimePageDataAuditLog get_audit_logs_by_customer_id_using_get(customer_id, limit, start_time=start_time, end_time=end_time, asc_order=asc_order, offset=offset)

@@ -4,59 +4,11 @@ All URIs are relative to *//localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**activate_user_using_post**](AuthControllerApi.md#activate_user_using_post) | **POST** /api/noauth/activate | activateUser
 [**change_password_using_post**](AuthControllerApi.md#change_password_using_post) | **POST** /api/auth/changePassword | changePassword
-[**check_activate_token_using_get**](AuthControllerApi.md#check_activate_token_using_get) | **GET** /api/noauth/activate{?activateToken} | checkActivateToken
-[**check_reset_token_using_get**](AuthControllerApi.md#check_reset_token_using_get) | **GET** /api/noauth/resetPassword{?resetToken} | checkResetToken
+[**check_activate_token_using_get**](AuthControllerApi.md#check_activate_token_using_get) | **GET** /api/noauth/activate | checkActivateToken
+[**check_reset_token_using_get**](AuthControllerApi.md#check_reset_token_using_get) | **GET** /api/noauth/resetPassword | checkResetToken
 [**get_user_using_get**](AuthControllerApi.md#get_user_using_get) | **GET** /api/auth/user | getUser
 [**request_reset_password_by_email_using_post**](AuthControllerApi.md#request_reset_password_by_email_using_post) | **POST** /api/noauth/resetPasswordByEmail | requestResetPasswordByEmail
-[**reset_password_using_post**](AuthControllerApi.md#reset_password_using_post) | **POST** /api/noauth/resetPassword | resetPassword
-
-# **activate_user_using_post**
-> str activate_user_using_post(body)
-
-activateUser
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = thingsboard_client.AuthControllerApi()
-body = 'body_example' # str | activateRequest
-
-try:
-    # activateUser
-    api_response = api_instance.activate_user_using_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AuthControllerApi->activate_user_using_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| activateRequest | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **change_password_using_post**
 > change_password_using_post(body)
@@ -291,52 +243,6 @@ No authorization required
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **reset_password_using_post**
-> str reset_password_using_post(body)
-
-resetPassword
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = thingsboard_client.AuthControllerApi()
-body = 'body_example' # str | resetPasswordRequest
-
-try:
-    # resetPassword
-    api_response = api_instance.reset_password_using_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AuthControllerApi->reset_password_using_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**str**](str.md)| resetPasswordRequest | 
-
-### Return type
-
-**str**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

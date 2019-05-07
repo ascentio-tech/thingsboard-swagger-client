@@ -7,13 +7,11 @@ Method | HTTP request | Description
 [**assign_asset_to_customer_using_post**](AssetControllerApi.md#assign_asset_to_customer_using_post) | **POST** /api/customer/{customerId}/asset/{assetId} | assignAssetToCustomer
 [**assign_asset_to_public_customer_using_post**](AssetControllerApi.md#assign_asset_to_public_customer_using_post) | **POST** /api/customer/public/asset/{assetId} | assignAssetToPublicCustomer
 [**delete_asset_using_delete**](AssetControllerApi.md#delete_asset_using_delete) | **DELETE** /api/asset/{assetId} | deleteAsset
-[**find_by_query_using_post**](AssetControllerApi.md#find_by_query_using_post) | **POST** /api/assets | findByQuery
 [**get_asset_by_id_using_get**](AssetControllerApi.md#get_asset_by_id_using_get) | **GET** /api/asset/{assetId} | getAssetById
 [**get_asset_types_using_get**](AssetControllerApi.md#get_asset_types_using_get) | **GET** /api/asset/types | getAssetTypes
-[**get_assets_by_ids_using_get**](AssetControllerApi.md#get_assets_by_ids_using_get) | **GET** /api/assets{?assetIds} | getAssetsByIds
-[**get_customer_assets_using_get**](AssetControllerApi.md#get_customer_assets_using_get) | **GET** /api/customer/{customerId}/assets{?type,textSearch,idOffset,textOffset,limit} | getCustomerAssets
-[**get_tenant_asset_using_get**](AssetControllerApi.md#get_tenant_asset_using_get) | **GET** /api/tenant/assets{?assetName} | getTenantAsset
-[**get_tenant_assets_using_get**](AssetControllerApi.md#get_tenant_assets_using_get) | **GET** /api/tenant/assets{?type,textSearch,idOffset,textOffset,limit} | getTenantAssets
+[**get_assets_by_ids_using_get**](AssetControllerApi.md#get_assets_by_ids_using_get) | **GET** /api/assets | getAssetsByIds
+[**get_customer_assets_using_get**](AssetControllerApi.md#get_customer_assets_using_get) | **GET** /api/customer/{customerId}/assets | getCustomerAssets
+[**get_tenant_assets_using_get**](AssetControllerApi.md#get_tenant_assets_using_get) | **GET** /api/tenant/assets | getTenantAssets
 [**save_asset_using_post**](AssetControllerApi.md#save_asset_using_post) | **POST** /api/asset | saveAsset
 [**unassign_asset_from_customer_using_delete**](AssetControllerApi.md#unassign_asset_from_customer_using_delete) | **DELETE** /api/customer/asset/{assetId} | unassignAssetFromCustomer
 
@@ -171,58 +169,6 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **find_by_query_using_post**
-> list[Asset] find_by_query_using_post(body)
-
-findByQuery
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: X-Authorization
-configuration = thingsboard_client.Configuration()
-configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = thingsboard_client.AssetControllerApi(thingsboard_client.ApiClient(configuration))
-body = thingsboard_client.AssetSearchQuery() # AssetSearchQuery | query
-
-try:
-    # findByQuery
-    api_response = api_instance.find_by_query_using_post(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AssetControllerApi->find_by_query_using_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**AssetSearchQuery**](AssetSearchQuery.md)| query | 
-
-### Return type
-
-[**list[Asset]**](Asset.md)
-
-### Authorization
-
-[X-Authorization](../README.md#X-Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -428,58 +374,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextPageDataAsset**](TextPageDataAsset.md)
-
-### Authorization
-
-[X-Authorization](../README.md#X-Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_tenant_asset_using_get**
-> Asset get_tenant_asset_using_get(asset_name)
-
-getTenantAsset
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: X-Authorization
-configuration = thingsboard_client.Configuration()
-configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = thingsboard_client.AssetControllerApi(thingsboard_client.ApiClient(configuration))
-asset_name = 'asset_name_example' # str | assetName
-
-try:
-    # getTenantAsset
-    api_response = api_instance.get_tenant_asset_using_get(asset_name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AssetControllerApi->get_tenant_asset_using_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **asset_name** | **str**| assetName | 
-
-### Return type
-
-[**Asset**](Asset.md)
 
 ### Authorization
 

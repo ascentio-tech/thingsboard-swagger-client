@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_component_descriptor_by_clazz_using_get**](ComponentDescriptorControllerApi.md#get_component_descriptor_by_clazz_using_get) | **GET** /api/component/{componentDescriptorClazz} | getComponentDescriptorByClazz
 [**get_component_descriptors_by_type_using_get**](ComponentDescriptorControllerApi.md#get_component_descriptors_by_type_using_get) | **GET** /api/components/{componentType} | getComponentDescriptorsByType
-[**get_component_descriptors_by_types_using_get**](ComponentDescriptorControllerApi.md#get_component_descriptors_by_types_using_get) | **GET** /api/components{?componentTypes} | getComponentDescriptorsByTypes
+[**get_component_descriptors_by_types_using_get**](ComponentDescriptorControllerApi.md#get_component_descriptors_by_types_using_get) | **GET** /api/components | getComponentDescriptorsByTypes
 
 # **get_component_descriptor_by_clazz_using_get**
 > ComponentDescriptor get_component_descriptor_by_clazz_using_get(component_descriptor_clazz)

@@ -611,7 +611,7 @@ class AlarmControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/alarm/{entityType}/{entityId}{?searchStatus,status,limit,startTime,endTime,ascOrder,offset,fetchOriginator}', 'GET',
+            '/api/alarm/{entityType}/{entityId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -720,7 +720,7 @@ class AlarmControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/alarm/highestSeverity/{entityType}/{entityId}{?searchStatus,status}', 'GET',
+            '/api/alarm/highestSeverity/{entityType}/{entityId}', 'GET',
             path_params,
             query_params,
             header_params,

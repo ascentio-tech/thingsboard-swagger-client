@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**assign_dashboard_to_customer_using_post**](DashboardControllerApi.md#assign_dashboard_to_customer_using_post) | **POST** /api/customer/{customerId}/dashboard/{dashboardId} | assignDashboardToCustomer
 [**assign_dashboard_to_public_customer_using_post**](DashboardControllerApi.md#assign_dashboard_to_public_customer_using_post) | **POST** /api/customer/public/dashboard/{dashboardId} | assignDashboardToPublicCustomer
 [**delete_dashboard_using_delete**](DashboardControllerApi.md#delete_dashboard_using_delete) | **DELETE** /api/dashboard/{dashboardId} | deleteDashboard
-[**get_customer_dashboards_using_get**](DashboardControllerApi.md#get_customer_dashboards_using_get) | **GET** /api/customer/{customerId}/dashboards{?startTime,endTime,ascOrder,offset,limit} | getCustomerDashboards
+[**get_customer_dashboards_using_get**](DashboardControllerApi.md#get_customer_dashboards_using_get) | **GET** /api/customer/{customerId}/dashboards | getCustomerDashboards
 [**get_dashboard_by_id_using_get**](DashboardControllerApi.md#get_dashboard_by_id_using_get) | **GET** /api/dashboard/{dashboardId} | getDashboardById
 [**get_dashboard_info_by_id_using_get**](DashboardControllerApi.md#get_dashboard_info_by_id_using_get) | **GET** /api/dashboard/info/{dashboardId} | getDashboardInfoById
 [**get_max_datapoints_limit_using_get**](DashboardControllerApi.md#get_max_datapoints_limit_using_get) | **GET** /api/dashboard/maxDatapointsLimit | getMaxDatapointsLimit
 [**get_server_time_using_get**](DashboardControllerApi.md#get_server_time_using_get) | **GET** /api/dashboard/serverTime | getServerTime
-[**get_tenant_dashboards_using_get**](DashboardControllerApi.md#get_tenant_dashboards_using_get) | **GET** /api/tenant/dashboards{?textSearch,idOffset,textOffset,limit} | getTenantDashboards
-[**get_tenant_dashboards_using_get1**](DashboardControllerApi.md#get_tenant_dashboards_using_get1) | **GET** /api/tenant/{tenantId}/dashboards{?textSearch,idOffset,textOffset,limit} | getTenantDashboards
+[**get_tenant_dashboards_using_get**](DashboardControllerApi.md#get_tenant_dashboards_using_get) | **GET** /api/tenant/dashboards | getTenantDashboards
+[**get_tenant_dashboards_using_get1**](DashboardControllerApi.md#get_tenant_dashboards_using_get1) | **GET** /api/tenant/{tenantId}/dashboards | getTenantDashboards
 [**remove_dashboard_customers_using_post**](DashboardControllerApi.md#remove_dashboard_customers_using_post) | **POST** /api/dashboard/{dashboardId}/customers/remove | removeDashboardCustomers
 [**save_dashboard_using_post**](DashboardControllerApi.md#save_dashboard_using_post) | **POST** /api/dashboard | saveDashboard
 [**unassign_dashboard_from_customer_using_delete**](DashboardControllerApi.md#unassign_dashboard_from_customer_using_delete) | **DELETE** /api/customer/{customerId}/dashboard/{dashboardId} | unassignDashboardFromCustomer

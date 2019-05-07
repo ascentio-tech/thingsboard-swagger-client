@@ -7,14 +7,12 @@ Method | HTTP request | Description
 [**assign_device_to_customer_using_post**](DeviceControllerApi.md#assign_device_to_customer_using_post) | **POST** /api/customer/{customerId}/device/{deviceId} | assignDeviceToCustomer
 [**assign_device_to_public_customer_using_post**](DeviceControllerApi.md#assign_device_to_public_customer_using_post) | **POST** /api/customer/public/device/{deviceId} | assignDeviceToPublicCustomer
 [**delete_device_using_delete**](DeviceControllerApi.md#delete_device_using_delete) | **DELETE** /api/device/{deviceId} | deleteDevice
-[**find_by_query_using_post1**](DeviceControllerApi.md#find_by_query_using_post1) | **POST** /api/devices | findByQuery
-[**get_customer_devices_using_get**](DeviceControllerApi.md#get_customer_devices_using_get) | **GET** /api/customer/{customerId}/devices{?type,textSearch,idOffset,textOffset,limit} | getCustomerDevices
+[**get_customer_devices_using_get**](DeviceControllerApi.md#get_customer_devices_using_get) | **GET** /api/customer/{customerId}/devices | getCustomerDevices
 [**get_device_by_id_using_get**](DeviceControllerApi.md#get_device_by_id_using_get) | **GET** /api/device/{deviceId} | getDeviceById
 [**get_device_credentials_by_device_id_using_get**](DeviceControllerApi.md#get_device_credentials_by_device_id_using_get) | **GET** /api/device/{deviceId}/credentials | getDeviceCredentialsByDeviceId
 [**get_device_types_using_get**](DeviceControllerApi.md#get_device_types_using_get) | **GET** /api/device/types | getDeviceTypes
-[**get_devices_by_ids_using_get**](DeviceControllerApi.md#get_devices_by_ids_using_get) | **GET** /api/devices{?deviceIds} | getDevicesByIds
-[**get_tenant_device_using_get**](DeviceControllerApi.md#get_tenant_device_using_get) | **GET** /api/tenant/devices{?deviceName} | getTenantDevice
-[**get_tenant_devices_using_get**](DeviceControllerApi.md#get_tenant_devices_using_get) | **GET** /api/tenant/devices{?type,textSearch,idOffset,textOffset,limit} | getTenantDevices
+[**get_devices_by_ids_using_get**](DeviceControllerApi.md#get_devices_by_ids_using_get) | **GET** /api/devices | getDevicesByIds
+[**get_tenant_devices_using_get**](DeviceControllerApi.md#get_tenant_devices_using_get) | **GET** /api/tenant/devices | getTenantDevices
 [**save_device_credentials_using_post**](DeviceControllerApi.md#save_device_credentials_using_post) | **POST** /api/device/credentials | saveDeviceCredentials
 [**save_device_using_post**](DeviceControllerApi.md#save_device_using_post) | **POST** /api/device | saveDevice
 [**unassign_device_from_customer_using_delete**](DeviceControllerApi.md#unassign_device_from_customer_using_delete) | **DELETE** /api/customer/device/{deviceId} | unassignDeviceFromCustomer
@@ -173,58 +171,6 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **find_by_query_using_post1**
-> list[Device] find_by_query_using_post1(body)
-
-findByQuery
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: X-Authorization
-configuration = thingsboard_client.Configuration()
-configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = thingsboard_client.DeviceControllerApi(thingsboard_client.ApiClient(configuration))
-body = thingsboard_client.DeviceSearchQuery() # DeviceSearchQuery | query
-
-try:
-    # findByQuery
-    api_response = api_instance.find_by_query_using_post1(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DeviceControllerApi->find_by_query_using_post1: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**DeviceSearchQuery**](DeviceSearchQuery.md)| query | 
-
-### Return type
-
-[**list[Device]**](Device.md)
-
-### Authorization
-
-[X-Authorization](../README.md#X-Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -482,58 +428,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[Device]**](Device.md)
-
-### Authorization
-
-[X-Authorization](../README.md#X-Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_tenant_device_using_get**
-> Device get_tenant_device_using_get(device_name)
-
-getTenantDevice
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: X-Authorization
-configuration = thingsboard_client.Configuration()
-configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = thingsboard_client.DeviceControllerApi(thingsboard_client.ApiClient(configuration))
-device_name = 'device_name_example' # str | deviceName
-
-try:
-    # getTenantDevice
-    api_response = api_instance.get_tenant_device_using_get(device_name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DeviceControllerApi->get_tenant_device_using_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_name** | **str**| deviceName | 
-
-### Return type
-
-[**Device**](Device.md)
 
 ### Authorization
 

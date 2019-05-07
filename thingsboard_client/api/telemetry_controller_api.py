@@ -126,7 +126,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{deviceId}/{scope}{?keys}', 'DELETE',
+            '/api/plugins/telemetry/{deviceId}/{scope}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -243,7 +243,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/{scope}{?keys}', 'DELETE',
+            '/api/plugins/telemetry/{entityType}/{entityId}/{scope}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -368,7 +368,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/timeseries/delete{?keys,deleteAllDataForKeys,startTs,endTs,rewriteLatestIfDeleted}', 'DELETE',
+            '/api/plugins/telemetry/{entityType}/{entityId}/timeseries/delete', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -691,7 +691,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes/{scope}{?keys}', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes/{scope}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -796,7 +796,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes{?keys}', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/attributes', 'GET',
             path_params,
             query_params,
             header_params,
@@ -901,7 +901,7 @@ class TelemetryControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries{?keys}', 'GET',
+            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1003,377 +1003,6 @@ class TelemetryControllerApi(object):
 
         return self.api_client.call_api(
             '/api/plugins/telemetry/{entityType}/{entityId}/keys/timeseries', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='DeferredResultResponseEntity',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_timeseries_using_get(self, entity_type, entity_id, keys, start_ts, end_ts, **kwargs):  # noqa: E501
-        """getTimeseries  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_timeseries_using_get(entity_type, entity_id, keys, start_ts, end_ts, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str entity_type: entityType (required)
-        :param str entity_id: entityId (required)
-        :param str keys: keys (required)
-        :param str start_ts: startTs (required)
-        :param str end_ts: endTs (required)
-        :param int interval: interval
-        :param int limit: limit
-        :param str agg: agg
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, **kwargs)  # noqa: E501
-            return data
-
-    def get_timeseries_using_get_with_http_info(self, entity_type, entity_id, keys, start_ts, end_ts, **kwargs):  # noqa: E501
-        """getTimeseries  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_timeseries_using_get_with_http_info(entity_type, entity_id, keys, start_ts, end_ts, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str entity_type: entityType (required)
-        :param str entity_id: entityId (required)
-        :param str keys: keys (required)
-        :param str start_ts: startTs (required)
-        :param str end_ts: endTs (required)
-        :param int interval: interval
-        :param int limit: limit
-        :param str agg: agg
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['entity_type', 'entity_id', 'keys', 'start_ts', 'end_ts', 'interval', 'limit', 'agg']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_timeseries_using_get" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'entity_type' is set
-        if ('entity_type' not in params or
-                params['entity_type'] is None):
-            raise ValueError("Missing the required parameter `entity_type` when calling `get_timeseries_using_get`")  # noqa: E501
-        # verify the required parameter 'entity_id' is set
-        if ('entity_id' not in params or
-                params['entity_id'] is None):
-            raise ValueError("Missing the required parameter `entity_id` when calling `get_timeseries_using_get`")  # noqa: E501
-        # verify the required parameter 'keys' is set
-        if ('keys' not in params or
-                params['keys'] is None):
-            raise ValueError("Missing the required parameter `keys` when calling `get_timeseries_using_get`")  # noqa: E501
-        # verify the required parameter 'start_ts' is set
-        if ('start_ts' not in params or
-                params['start_ts'] is None):
-            raise ValueError("Missing the required parameter `start_ts` when calling `get_timeseries_using_get`")  # noqa: E501
-        # verify the required parameter 'end_ts' is set
-        if ('end_ts' not in params or
-                params['end_ts'] is None):
-            raise ValueError("Missing the required parameter `end_ts` when calling `get_timeseries_using_get`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'entity_type' in params:
-            path_params['entityType'] = params['entity_type']  # noqa: E501
-        if 'entity_id' in params:
-            path_params['entityId'] = params['entity_id']  # noqa: E501
-
-        query_params = []
-        if 'interval' in params:
-            query_params.append(('interval', params['interval']))  # noqa: E501
-        if 'limit' in params:
-            query_params.append(('limit', params['limit']))  # noqa: E501
-        if 'agg' in params:
-            query_params.append(('agg', params['agg']))  # noqa: E501
-        if 'keys' in params:
-            query_params.append(('keys', params['keys']))  # noqa: E501
-        if 'start_ts' in params:
-            query_params.append(('startTs', params['start_ts']))  # noqa: E501
-        if 'end_ts' in params:
-            query_params.append(('endTs', params['end_ts']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['X-Authorization']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/values/timeseries{?interval,limit,agg,keys,startTs,endTs}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='DeferredResultResponseEntity',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def save_device_attributes_using_post(self, body, device_id, scope, **kwargs):  # noqa: E501
-        """saveDeviceAttributes  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.save_device_attributes_using_post(body, device_id, scope, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str body: request (required)
-        :param str device_id: deviceId (required)
-        :param str scope: scope (required)
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.save_device_attributes_using_post_with_http_info(body, device_id, scope, **kwargs)  # noqa: E501
-        else:
-            (data) = self.save_device_attributes_using_post_with_http_info(body, device_id, scope, **kwargs)  # noqa: E501
-            return data
-
-    def save_device_attributes_using_post_with_http_info(self, body, device_id, scope, **kwargs):  # noqa: E501
-        """saveDeviceAttributes  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.save_device_attributes_using_post_with_http_info(body, device_id, scope, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str body: request (required)
-        :param str device_id: deviceId (required)
-        :param str scope: scope (required)
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'device_id', 'scope']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method save_device_attributes_using_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `save_device_attributes_using_post`")  # noqa: E501
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `save_device_attributes_using_post`")  # noqa: E501
-        # verify the required parameter 'scope' is set
-        if ('scope' not in params or
-                params['scope'] is None):
-            raise ValueError("Missing the required parameter `scope` when calling `save_device_attributes_using_post`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
-        if 'scope' in params:
-            path_params['scope'] = params['scope']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['X-Authorization']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/plugins/telemetry/{deviceId}/{scope}', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='DeferredResultResponseEntity',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', True),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def save_entity_attributes_v1_using_post(self, body, entity_type, entity_id, scope, **kwargs):  # noqa: E501
-        """saveEntityAttributesV1  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.save_entity_attributes_v1_using_post(body, entity_type, entity_id, scope, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str body: request (required)
-        :param str entity_type: entityType (required)
-        :param str entity_id: entityId (required)
-        :param str scope: scope (required)
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.save_entity_attributes_v1_using_post_with_http_info(body, entity_type, entity_id, scope, **kwargs)  # noqa: E501
-        else:
-            (data) = self.save_entity_attributes_v1_using_post_with_http_info(body, entity_type, entity_id, scope, **kwargs)  # noqa: E501
-            return data
-
-    def save_entity_attributes_v1_using_post_with_http_info(self, body, entity_type, entity_id, scope, **kwargs):  # noqa: E501
-        """saveEntityAttributesV1  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.save_entity_attributes_v1_using_post_with_http_info(body, entity_type, entity_id, scope, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str body: request (required)
-        :param str entity_type: entityType (required)
-        :param str entity_id: entityId (required)
-        :param str scope: scope (required)
-        :return: DeferredResultResponseEntity
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['body', 'entity_type', 'entity_id', 'scope']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method save_entity_attributes_v1_using_post" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `save_entity_attributes_v1_using_post`")  # noqa: E501
-        # verify the required parameter 'entity_type' is set
-        if ('entity_type' not in params or
-                params['entity_type'] is None):
-            raise ValueError("Missing the required parameter `entity_type` when calling `save_entity_attributes_v1_using_post`")  # noqa: E501
-        # verify the required parameter 'entity_id' is set
-        if ('entity_id' not in params or
-                params['entity_id'] is None):
-            raise ValueError("Missing the required parameter `entity_id` when calling `save_entity_attributes_v1_using_post`")  # noqa: E501
-        # verify the required parameter 'scope' is set
-        if ('scope' not in params or
-                params['scope'] is None):
-            raise ValueError("Missing the required parameter `scope` when calling `save_entity_attributes_v1_using_post`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'entity_type' in params:
-            path_params['entityType'] = params['entity_type']  # noqa: E501
-        if 'entity_id' in params:
-            path_params['entityId'] = params['entity_id']  # noqa: E501
-        if 'scope' in params:
-            path_params['scope'] = params['scope']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['*/*'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['X-Authorization']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/api/plugins/telemetry/{entityType}/{entityId}/{scope}', 'POST',
             path_params,
             query_params,
             header_params,

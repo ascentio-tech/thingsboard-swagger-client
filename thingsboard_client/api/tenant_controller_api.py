@@ -304,7 +304,7 @@ class TenantControllerApi(object):
         auth_settings = ['X-Authorization']  # noqa: E501
 
         return self.api_client.call_api(
-            '/api/tenants{?textSearch,idOffset,textOffset,limit}', 'GET',
+            '/api/tenants', 'GET',
             path_params,
             query_params,
             header_params,

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_tenant_using_delete**](TenantControllerApi.md#delete_tenant_using_delete) | **DELETE** /api/tenant/{tenantId} | deleteTenant
 [**get_tenant_by_id_using_get**](TenantControllerApi.md#get_tenant_by_id_using_get) | **GET** /api/tenant/{tenantId} | getTenantById
-[**get_tenants_using_get**](TenantControllerApi.md#get_tenants_using_get) | **GET** /api/tenants{?textSearch,idOffset,textOffset,limit} | getTenants
+[**get_tenants_using_get**](TenantControllerApi.md#get_tenants_using_get) | **GET** /api/tenants | getTenants
 [**save_tenant_using_post**](TenantControllerApi.md#save_tenant_using_post) | **POST** /api/tenant | saveTenant
 
 # **delete_tenant_using_delete**
