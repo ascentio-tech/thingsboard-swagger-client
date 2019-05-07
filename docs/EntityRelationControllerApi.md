@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_relation_using_delete**](EntityRelationControllerApi.md#delete_relation_using_delete) | **DELETE** /api/relation{?relationTypeGroup,fromId,fromType,relationType,toId,toType} | deleteRelation
 [**delete_relations_using_delete**](EntityRelationControllerApi.md#delete_relations_using_delete) | **DELETE** /api/relations{?entityId,entityType,id,type} | deleteRelations
-[**find_by_from_using_get**](EntityRelationControllerApi.md#find_by_from_using_get) | **GET** /api/relations{?relationTypeGroup,fromId,fromType} | findByFrom
-[**find_by_from_using_get1**](EntityRelationControllerApi.md#find_by_from_using_get1) | **GET** /api/relations{?relationTypeGroup,fromId,fromType,relationType} | findByFrom
+[**find_by_from_using_get**](EntityRelationControllerApi.md#find_by_from_using_get) | **GET** /api/relations{?relationTypeGroup,fromId,fromType,relationType} | findByFrom
+[**find_by_from_using_get1**](EntityRelationControllerApi.md#find_by_from_using_get1) | **GET** /api/relations{?relationTypeGroup,fromId,fromType} | findByFrom
 [**find_by_query_using_post2**](EntityRelationControllerApi.md#find_by_query_using_post2) | **POST** /api/relations | findByQuery
 [**find_by_to_using_get**](EntityRelationControllerApi.md#find_by_to_using_get) | **GET** /api/relations{?relationTypeGroup,toId,toType} | findByTo
 [**find_by_to_using_get1**](EntityRelationControllerApi.md#find_by_to_using_get1) | **GET** /api/relations{?relationTypeGroup,toId,toType,relationType} | findByTo
@@ -136,63 +136,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **find_by_from_using_get**
-> list[EntityRelation] find_by_from_using_get(from_id, from_type, relation_type_group=relation_type_group)
-
-findByFrom
-
-### Example
-```python
-from __future__ import print_function
-import time
-import thingsboard_client
-from thingsboard_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: X-Authorization
-configuration = thingsboard_client.Configuration()
-configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = thingsboard_client.EntityRelationControllerApi(thingsboard_client.ApiClient(configuration))
-from_id = 'from_id_example' # str | fromId
-from_type = 'from_type_example' # str | fromType
-relation_type_group = 'relation_type_group_example' # str | relationTypeGroup (optional)
-
-try:
-    # findByFrom
-    api_response = api_instance.find_by_from_using_get(from_id, from_type, relation_type_group=relation_type_group)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling EntityRelationControllerApi->find_by_from_using_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **from_id** | **str**| fromId | 
- **from_type** | **str**| fromType | 
- **relation_type_group** | **str**| relationTypeGroup | [optional] 
-
-### Return type
-
-[**list[EntityRelation]**](EntityRelation.md)
-
-### Authorization
-
-[X-Authorization](../README.md#X-Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **find_by_from_using_get1**
-> list[EntityRelation] find_by_from_using_get1(from_id, from_type, relation_type, relation_type_group=relation_type_group)
+> list[EntityRelation] find_by_from_using_get(from_id, from_type, relation_type, relation_type_group=relation_type_group)
 
 findByFrom
 
@@ -219,7 +163,64 @@ relation_type_group = 'relation_type_group_example' # str | relationTypeGroup (o
 
 try:
     # findByFrom
-    api_response = api_instance.find_by_from_using_get1(from_id, from_type, relation_type, relation_type_group=relation_type_group)
+    api_response = api_instance.find_by_from_using_get(from_id, from_type, relation_type, relation_type_group=relation_type_group)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling EntityRelationControllerApi->find_by_from_using_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **from_id** | **str**| fromId | 
+ **from_type** | **str**| fromType | 
+ **relation_type** | **str**| relationType | 
+ **relation_type_group** | **str**| relationTypeGroup | [optional] 
+
+### Return type
+
+[**list[EntityRelation]**](EntityRelation.md)
+
+### Authorization
+
+[X-Authorization](../README.md#X-Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **find_by_from_using_get1**
+> list[EntityRelation] find_by_from_using_get1(from_id, from_type, relation_type_group=relation_type_group)
+
+findByFrom
+
+### Example
+```python
+from __future__ import print_function
+import time
+import thingsboard_client
+from thingsboard_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: X-Authorization
+configuration = thingsboard_client.Configuration()
+configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = thingsboard_client.EntityRelationControllerApi(thingsboard_client.ApiClient(configuration))
+from_id = 'from_id_example' # str | fromId
+from_type = 'from_type_example' # str | fromType
+relation_type_group = 'relation_type_group_example' # str | relationTypeGroup (optional)
+
+try:
+    # findByFrom
+    api_response = api_instance.find_by_from_using_get1(from_id, from_type, relation_type_group=relation_type_group)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EntityRelationControllerApi->find_by_from_using_get1: %s\n" % e)
@@ -231,7 +232,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **from_id** | **str**| fromId | 
  **from_type** | **str**| fromType | 
- **relation_type** | **str**| relationType | 
  **relation_type_group** | **str**| relationTypeGroup | [optional] 
 
 ### Return type

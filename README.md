@@ -202,8 +202,8 @@ Class | Method | HTTP request | Description
 *DeviceControllerApi* | [**unassign_device_from_customer_using_delete**](docs/DeviceControllerApi.md#unassign_device_from_customer_using_delete) | **DELETE** /api/customer/device/{deviceId} | unassignDeviceFromCustomer
 *EntityRelationControllerApi* | [**delete_relation_using_delete**](docs/EntityRelationControllerApi.md#delete_relation_using_delete) | **DELETE** /api/relation{?relationTypeGroup,fromId,fromType,relationType,toId,toType} | deleteRelation
 *EntityRelationControllerApi* | [**delete_relations_using_delete**](docs/EntityRelationControllerApi.md#delete_relations_using_delete) | **DELETE** /api/relations{?entityId,entityType,id,type} | deleteRelations
-*EntityRelationControllerApi* | [**find_by_from_using_get**](docs/EntityRelationControllerApi.md#find_by_from_using_get) | **GET** /api/relations{?relationTypeGroup,fromId,fromType} | findByFrom
-*EntityRelationControllerApi* | [**find_by_from_using_get1**](docs/EntityRelationControllerApi.md#find_by_from_using_get1) | **GET** /api/relations{?relationTypeGroup,fromId,fromType,relationType} | findByFrom
+*EntityRelationControllerApi* | [**find_by_from_using_get**](docs/EntityRelationControllerApi.md#find_by_from_using_get) | **GET** /api/relations{?relationTypeGroup,fromId,fromType,relationType} | findByFrom
+*EntityRelationControllerApi* | [**find_by_from_using_get1**](docs/EntityRelationControllerApi.md#find_by_from_using_get1) | **GET** /api/relations{?relationTypeGroup,fromId,fromType} | findByFrom
 *EntityRelationControllerApi* | [**find_by_query_using_post2**](docs/EntityRelationControllerApi.md#find_by_query_using_post2) | **POST** /api/relations | findByQuery
 *EntityRelationControllerApi* | [**find_by_to_using_get**](docs/EntityRelationControllerApi.md#find_by_to_using_get) | **GET** /api/relations{?relationTypeGroup,toId,toType} | findByTo
 *EntityRelationControllerApi* | [**find_by_to_using_get1**](docs/EntityRelationControllerApi.md#find_by_to_using_get1) | **GET** /api/relations{?relationTypeGroup,toId,toType,relationType} | findByTo
