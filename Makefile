@@ -15,7 +15,7 @@ clean-swagger-spec:
 
 generate-swagger-client: swagger-codegen-cli.jar clean-swagger-spec clean-generated
 	java -jar swagger-codegen-cli.jar generate -i ${SWAGGER_SPEC} -l python -o . \
-    --additional-properties projectName=thingsboard-client,packageName=thingsboard_client,packageVersion=${THINGSBOARD_VERSION},appDescription='Thingsboard REST client (auto-generated from Swagger spec)'
+    --additional-properties projectName=thingsboard-swagger-client,packageName=thingsboard_client,packageVersion=${THINGSBOARD_VERSION},appDescription='Thingsboard REST client (auto-generated from Swagger spec)'
 
 dist/thingsboard-client-${THINGSBOARD_VERSION}.tar.gz:
 	python setup.py sdist
