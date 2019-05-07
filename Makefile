@@ -12,6 +12,7 @@ clean:
 SWAGGER_SPEC=swagger/thingsboard.json
 clean-swagger-spec:
 	sed -i -e 's/{?.*}//g' ${SWAGGER_SPEC}
+	sed -i -e '/"isPublic"$$/d' ${SWAGGER_SPEC}
 
 generate-swagger-client: swagger-codegen-cli.jar clean-swagger-spec clean-generated
 	java -jar swagger-codegen-cli.jar generate -i ${SWAGGER_SPEC} -l python -o . \
