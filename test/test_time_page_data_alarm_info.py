@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.time_page_data_alarm_info import TimePageDataAlarmInfo  # noqa: E501
+from thingsboard_client.models.time_page_data_alarm_info import TimePageDataAlarmInfo  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

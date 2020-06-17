@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.rpc_controller_api import RpcControllerApi  # noqa: E501
+from thingsboard_client.api.rpc_controller_api import RpcControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestRpcControllerApi(unittest.TestCase):
     """RpcControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.rpc_controller_api.RpcControllerApi()  # noqa: E501
+        self.api = RpcControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

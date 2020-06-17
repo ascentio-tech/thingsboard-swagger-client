@@ -299,7 +299,7 @@ search_status = 'search_status_example' # str | searchStatus (optional)
 status = 'status_example' # str | status (optional)
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 fetch_originator = true # bool | fetchOriginator (optional)
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
  **status** | **str**| status | [optional] 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
  **fetch_originator** | **bool**| fetchOriginator | [optional] 
 

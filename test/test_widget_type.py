@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.widget_type import WidgetType  # noqa: E501
+from thingsboard_client.models.widget_type import WidgetType  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.component_descriptor_controller_api import ComponentDescriptorControllerApi  # noqa: E501
+from thingsboard_client.api.component_descriptor_controller_api import ComponentDescriptorControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestComponentDescriptorControllerApi(unittest.TestCase):
     """ComponentDescriptorControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.component_descriptor_controller_api.ComponentDescriptorControllerApi()  # noqa: E501
+        self.api = ComponentDescriptorControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

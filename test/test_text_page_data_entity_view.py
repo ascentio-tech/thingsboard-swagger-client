@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.text_page_data_entity_view import TextPageDataEntityView  # noqa: E501
+from thingsboard_client.models.text_page_data_entity_view import TextPageDataEntityView  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

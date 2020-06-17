@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.entity_view_controller_api import EntityViewControllerApi  # noqa: E501
+from thingsboard_client.api.entity_view_controller_api import EntityViewControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestEntityViewControllerApi(unittest.TestCase):
     """EntityViewControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.entity_view_controller_api.EntityViewControllerApi()  # noqa: E501
+        self.api = EntityViewControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

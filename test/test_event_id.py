@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.event_id import EventId  # noqa: E501
+from thingsboard_client.models.event_id import EventId  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

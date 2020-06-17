@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.rule_chain_controller_api import RuleChainControllerApi  # noqa: E501
+from thingsboard_client.api.rule_chain_controller_api import RuleChainControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestRuleChainControllerApi(unittest.TestCase):
     """RuleChainControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.rule_chain_controller_api.RuleChainControllerApi()  # noqa: E501
+        self.api = RuleChainControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

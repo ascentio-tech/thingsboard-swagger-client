@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.customer_id import CustomerId  # noqa: F401,E501
 
 
 class ShortCustomerInfo(object):

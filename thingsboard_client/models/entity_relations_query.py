@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.entity_type_filter import EntityTypeFilter  # noqa: F401,E501
-from thingsboard_client.models.relations_search_parameters import RelationsSearchParameters  # noqa: F401,E501
 
 
 class EntityRelationsQuery(object):

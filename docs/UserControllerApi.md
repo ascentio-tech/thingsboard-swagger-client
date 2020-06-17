@@ -411,7 +411,7 @@ configuration.api_key['X-Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = thingsboard_client.UserControllerApi(thingsboard_client.ApiClient(configuration))
 body = thingsboard_client.User() # User | user
-send_activation_mail = true # bool | sendActivationMail (optional)
+send_activation_mail = true # bool | sendActivationMail (optional) (default to true)
 
 try:
     # saveUser
@@ -426,7 +426,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**User**](User.md)| user | 
- **send_activation_mail** | **bool**| sendActivationMail | [optional] 
+ **send_activation_mail** | **bool**| sendActivationMail | [optional] [default to true]
 
 ### Return type
 

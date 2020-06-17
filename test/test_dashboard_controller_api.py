@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.dashboard_controller_api import DashboardControllerApi  # noqa: E501
+from thingsboard_client.api.dashboard_controller_api import DashboardControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestDashboardControllerApi(unittest.TestCase):
     """DashboardControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.dashboard_controller_api.DashboardControllerApi()  # noqa: E501
+        self.api = DashboardControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

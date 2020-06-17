@@ -155,10 +155,10 @@ api_instance = thingsboard_client.TelemetryControllerApi(thingsboard_client.ApiC
 entity_type = 'entity_type_example' # str | entityType
 entity_id = 'entity_id_example' # str | entityId
 keys = 'keys_example' # str | keys
-delete_all_data_for_keys = true # bool | deleteAllDataForKeys (optional)
+delete_all_data_for_keys = false # bool | deleteAllDataForKeys (optional) (default to false)
 start_ts = 789 # int | startTs (optional)
 end_ts = 789 # int | endTs (optional)
-rewrite_latest_if_deleted = true # bool | rewriteLatestIfDeleted (optional)
+rewrite_latest_if_deleted = false # bool | rewriteLatestIfDeleted (optional) (default to false)
 
 try:
     # deleteEntityTimeseries
@@ -175,10 +175,10 @@ Name | Type | Description  | Notes
  **entity_type** | **str**| entityType | 
  **entity_id** | **str**| entityId | 
  **keys** | **str**| keys | 
- **delete_all_data_for_keys** | **bool**| deleteAllDataForKeys | [optional] 
+ **delete_all_data_for_keys** | **bool**| deleteAllDataForKeys | [optional] [default to false]
  **start_ts** | **int**| startTs | [optional] 
  **end_ts** | **int**| endTs | [optional] 
- **rewrite_latest_if_deleted** | **bool**| rewriteLatestIfDeleted | [optional] 
+ **rewrite_latest_if_deleted** | **bool**| rewriteLatestIfDeleted | [optional] [default to false]
 
 ### Return type
 

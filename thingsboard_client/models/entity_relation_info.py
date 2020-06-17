@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.entity_id import EntityId  # noqa: F401,E501
 
 
 class EntityRelationInfo(object):

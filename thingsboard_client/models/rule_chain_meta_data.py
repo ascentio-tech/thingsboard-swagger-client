@@ -14,10 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.node_connection_info import NodeConnectionInfo  # noqa: F401,E501
-from thingsboard_client.models.rule_chain_connection_info import RuleChainConnectionInfo  # noqa: F401,E501
-from thingsboard_client.models.rule_chain_id import RuleChainId  # noqa: F401,E501
-from thingsboard_client.models.rule_node import RuleNode  # noqa: F401,E501
 
 
 class RuleChainMetaData(object):

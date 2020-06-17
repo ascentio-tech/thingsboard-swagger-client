@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.dashboard_info import DashboardInfo  # noqa: E501
+from thingsboard_client.models.dashboard_info import DashboardInfo  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

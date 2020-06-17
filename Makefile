@@ -1,6 +1,6 @@
-SWAGGER_VERSION=3.0.8
+SWAGGER_VERSION=3.0.20
 swagger-codegen-cli.jar:
-	wget http://central.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/${SWAGGER_VERSION}/swagger-codegen-cli-${SWAGGER_VERSION}.jar -O swagger-codegen-cli.jar
+	wget https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/${SWAGGER_VERSION}/swagger-codegen-cli-${SWAGGER_VERSION}.jar -O swagger-codegen-cli.jar
 
 THINGSBOARD_VERSION=2.3.0
 clean-generated:

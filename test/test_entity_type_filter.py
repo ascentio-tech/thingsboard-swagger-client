@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.entity_type_filter import EntityTypeFilter  # noqa: E501
+from thingsboard_client.models.entity_type_filter import EntityTypeFilter  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

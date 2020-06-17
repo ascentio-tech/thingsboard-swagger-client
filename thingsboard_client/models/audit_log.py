@@ -14,11 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.audit_log_id import AuditLogId  # noqa: F401,E501
-from thingsboard_client.models.customer_id import CustomerId  # noqa: F401,E501
-from thingsboard_client.models.entity_id import EntityId  # noqa: F401,E501
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
-from thingsboard_client.models.user_id import UserId  # noqa: F401,E501
 
 
 class AuditLog(object):

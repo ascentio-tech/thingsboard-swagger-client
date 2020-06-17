@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.device_credentials_id import DeviceCredentialsId  # noqa: F401,E501
-from thingsboard_client.models.device_id import DeviceId  # noqa: F401,E501
 
 
 class DeviceCredentials(object):

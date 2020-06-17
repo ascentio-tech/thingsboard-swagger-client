@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
-from thingsboard_client.models.widget_type_id import WidgetTypeId  # noqa: F401,E501
 
 
 class WidgetType(object):

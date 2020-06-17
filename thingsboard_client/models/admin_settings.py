@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.admin_settings_id import AdminSettingsId  # noqa: F401,E501
 
 
 class AdminSettings(object):

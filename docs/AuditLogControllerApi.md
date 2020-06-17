@@ -34,7 +34,7 @@ customer_id = 'customer_id_example' # str | customerId
 limit = 'limit_example' # str | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
  **limit** | **str**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type
@@ -97,7 +97,7 @@ entity_id = 'entity_id_example' # str | entityId
 limit = 'limit_example' # str | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
  **limit** | **str**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type
@@ -160,7 +160,7 @@ user_id = 'user_id_example' # str | userId
 limit = 'limit_example' # str | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
  **limit** | **str**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type
@@ -221,7 +221,7 @@ api_instance = thingsboard_client.AuditLogControllerApi(thingsboard_client.ApiCl
 limit = 'limit_example' # str | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
  **limit** | **str**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type

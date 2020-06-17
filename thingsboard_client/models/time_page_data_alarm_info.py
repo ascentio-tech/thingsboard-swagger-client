@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.alarm_info import AlarmInfo  # noqa: F401,E501
-from thingsboard_client.models.time_page_link import TimePageLink  # noqa: F401,E501
 
 
 class TimePageDataAlarmInfo(object):

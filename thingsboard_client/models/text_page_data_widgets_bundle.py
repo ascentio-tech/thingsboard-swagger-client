@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.text_page_link import TextPageLink  # noqa: F401,E501
-from thingsboard_client.models.widgets_bundle import WidgetsBundle  # noqa: F401,E501
 
 
 class TextPageDataWidgetsBundle(object):

@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.component_descriptor_id import ComponentDescriptorId  # noqa: F401,E501
 
 
 class ComponentDescriptor(object):

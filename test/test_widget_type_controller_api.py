@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.widget_type_controller_api import WidgetTypeControllerApi  # noqa: E501
+from thingsboard_client.api.widget_type_controller_api import WidgetTypeControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestWidgetTypeControllerApi(unittest.TestCase):
     """WidgetTypeControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.widget_type_controller_api.WidgetTypeControllerApi()  # noqa: E501
+        self.api = WidgetTypeControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.telemetry_entity_view import TelemetryEntityView  # noqa: E501
+from thingsboard_client.models.telemetry_entity_view import TelemetryEntityView  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

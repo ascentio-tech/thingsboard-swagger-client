@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
-from thingsboard_client.models.widgets_bundle_id import WidgetsBundleId  # noqa: F401,E501
 
 
 class WidgetsBundle(object):

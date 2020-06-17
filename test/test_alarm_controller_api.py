@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.alarm_controller_api import AlarmControllerApi  # noqa: E501
+from thingsboard_client.api.alarm_controller_api import AlarmControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestAlarmControllerApi(unittest.TestCase):
     """AlarmControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.alarm_controller_api.AlarmControllerApi()  # noqa: E501
+        self.api = AlarmControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -14,9 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.rule_chain_id import RuleChainId  # noqa: F401,E501
-from thingsboard_client.models.rule_node_id import RuleNodeId  # noqa: F401,E501
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
 
 
 class RuleChain(object):

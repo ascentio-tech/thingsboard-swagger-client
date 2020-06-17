@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.alarm_info import AlarmInfo  # noqa: E501
+from thingsboard_client.models.alarm_info import AlarmInfo  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

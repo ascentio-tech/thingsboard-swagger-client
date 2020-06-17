@@ -14,9 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.alarm_id import AlarmId  # noqa: F401,E501
-from thingsboard_client.models.entity_id import EntityId  # noqa: F401,E501
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
 
 
 class Alarm(object):

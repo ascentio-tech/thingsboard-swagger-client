@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.audit_log import AuditLog  # noqa: F401,E501
-from thingsboard_client.models.time_page_link import TimePageLink  # noqa: F401,E501
 
 
 class TimePageDataAuditLog(object):

@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.admin_controller_api import AdminControllerApi  # noqa: E501
+from thingsboard_client.api.admin_controller_api import AdminControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestAdminControllerApi(unittest.TestCase):
     """AdminControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.admin_controller_api.AdminControllerApi()  # noqa: E501
+        self.api = AdminControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

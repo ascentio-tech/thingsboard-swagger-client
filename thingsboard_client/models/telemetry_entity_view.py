@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.attributes_entity_view import AttributesEntityView  # noqa: F401,E501
 
 
 class TelemetryEntityView(object):

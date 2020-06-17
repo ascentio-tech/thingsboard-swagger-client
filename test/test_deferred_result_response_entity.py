@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from models.deferred_result_response_entity import DeferredResultResponseEntity  # noqa: E501
+from thingsboard_client.models.deferred_result_response_entity import DeferredResultResponseEntity  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 

@@ -14,9 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from thingsboard_client.models.dashboard_id import DashboardId  # noqa: F401,E501
-from thingsboard_client.models.short_customer_info import ShortCustomerInfo  # noqa: F401,E501
-from thingsboard_client.models.tenant_id import TenantId  # noqa: F401,E501
 
 
 class DashboardInfo(object):

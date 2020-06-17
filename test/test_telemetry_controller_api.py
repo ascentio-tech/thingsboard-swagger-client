@@ -15,7 +15,7 @@ from __future__ import absolute_import
 import unittest
 
 import thingsboard_client
-from api.telemetry_controller_api import TelemetryControllerApi  # noqa: E501
+from thingsboard_client.api.telemetry_controller_api import TelemetryControllerApi  # noqa: E501
 from thingsboard_client.rest import ApiException
 
 
@@ -23,7 +23,7 @@ class TestTelemetryControllerApi(unittest.TestCase):
     """TelemetryControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.telemetry_controller_api.TelemetryControllerApi()  # noqa: E501
+        self.api = TelemetryControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -35,7 +35,7 @@ tenant_id = 'tenant_id_example' # str | tenantId
 limit = 56 # int | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type
@@ -102,7 +102,7 @@ tenant_id = 'tenant_id_example' # str | tenantId
 limit = 56 # int | limit
 start_time = 789 # int | startTime (optional)
 end_time = 789 # int | endTime (optional)
-asc_order = true # bool | ascOrder (optional)
+asc_order = false # bool | ascOrder (optional) (default to false)
 offset = 'offset_example' # str | offset (optional)
 
 try:
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | 
  **start_time** | **int**| startTime | [optional] 
  **end_time** | **int**| endTime | [optional] 
- **asc_order** | **bool**| ascOrder | [optional] 
+ **asc_order** | **bool**| ascOrder | [optional] [default to false]
  **offset** | **str**| offset | [optional] 
 
 ### Return type
